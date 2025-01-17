@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instrument Output</title>
+  <link rel="stylesheet" href="/static/css/output.css">
+</head>
+<body class="pt-32 sm:pt-40">
+<main class="">
+  <h1 class="text-center text-4xl font-bold">Instrument Monthly Output Report</h1>
+  <div class="mt-8 flex flex-col items-center justify-center">
+    <div class="max-w-2xl p-10 w-full">
+      <form class="w-full space-y-6" method="POST" action="/createPDF" >
+        <!-- Dropdown 1 and 2 -->
+        <div class="flex space-x-4 items-center justify-center">
+          <div class="center w-1/2 mb">
+            <label for="year" class="block text-teal-700 font-medium">Year</label>
+            <select id="year" name="year" class="w-full border-teal-300 text-teal-700 focus:ring-teal-500 focus:border-teal-500 rounded-md shadow-sm">
+              <option value="">Choose...</option>
+              <option value="24">2024</option>
+              <option value="25">2025</option>
+            </select>
+          </div>
+          <div class="w-1/2">
+            <label for="month" class="block text-teal-700 font-medium mb-2">Month</label>
+            <select id="month" name="month" class="w-full border-teal-300 text-teal-700 focus:ring-teal-500 focus:border-teal-500 rounded-md shadow-sm">
+              <option value="">Choose...</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex space-x-4 items-center justify-center">
+          <p>-------------------------------------------</p>
+        </div>
+        <!-- Submit Button -->
+        <div class="mt-2 text-center">
+          <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-lg border-4 text-white py-1 px-2 rounded" type="submit">
+            Download PDF
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+</html>
