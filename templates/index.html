@@ -44,11 +44,19 @@
         <div class="flex space-x-4 items-center justify-center">
           <p>-------------------------------------------</p>
         </div>
-        <!-- Submit Button -->
-        <div class="mt-2 text-center">
-          <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-lg border-4 text-white py-1 px-2 rounded" type="submit">
-            Download PDF
-          </button>
+        <div class="mt-2 flex justify-center">
+          <!-- PDF - Submit Button -->
+          <div class="w-1/2 text-center">
+            <button formaction="/createPDF" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-transparent hover:border-teal-700 text-lg border-4 text-white py-1 px-2 rounded" type="submit">
+              Download PDF
+            </button>
+          </div>
+          <!-- CSV - Submit Button -->
+          <div class="w-1/2 text-center">
+            <button formaction="/createCSV" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-transparent hover:border-teal-700 text-lg border-4 text-white py-1 px-2 rounded" type="submit">
+              Download CSV
+            </button>
+          </div>
         </div>
       </form>
     </div>

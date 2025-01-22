@@ -10,6 +10,7 @@ func main() {
 	router := http.ServeMux{}
 	router.HandleFunc("/", handlers.IndexHandler)
 	router.HandleFunc("/createPDF", handlers.CreatePdfHandler)
+	router.HandleFunc("/createCSV", handlers.CreateCsvHandler)
 
 	// Serve static files (CSS, JS, images)
 	fs := http.FileServer(http.Dir("./static"))
