@@ -17,7 +17,8 @@ func CreateCsvHandler(w http.ResponseWriter, r *http.Request) {
 	defer csv.Flush()
 
 	// Headline
-	csv.Write([]string{"Instrument Output for ", year, month})
+	period := year + month
+	csv.Write([]string{"Instrument Output for ", period})
 	csv.Write([]string{}) //Empty row for spacing
 
 	//Column Headers
