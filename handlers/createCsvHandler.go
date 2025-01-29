@@ -41,6 +41,6 @@ func CreateCsvHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "text/csv")
-	w.Header().Set("Content-Disposition", "attachment; filename=\""+year+month+".pdf\"")
+	w.Header().Set("Content-Disposition", "attachment; filename=\""+year+month+".csv\"")
 	w.WriteHeader(http.StatusOK)
 }
